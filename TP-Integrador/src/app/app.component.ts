@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { IAlumno } from './i-alumno';
+import { IDocente } from './i-docente';
+import { ICurso } from './i-curso';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +11,20 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'TP-Integrador';
+
+  alumno: IAlumno = {
+    dni: 34180781,
+    nombre: 'Javier',
+    apellido: 'Rodriguez'
+  };
+
+  docente: IDocente = {
+    dni: 34180782,
+    nombre: 'Fernando',
+    apellido: 'Arias'
+  };
+
+  curso: ICurso = {
+    titulo: 'Angular'
+  };
 }
