@@ -1,7 +1,4 @@
 import { Component } from '@angular/core';
-import { Alumno } from './alumno';
-import { Docente } from './docente';
-import { Curso } from './curso';
 
 @Component({
   selector: 'app-root',
