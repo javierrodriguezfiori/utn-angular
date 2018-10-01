@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, HostBinding } from '@angular/core';
+import { Component, OnInit, Input, Output, HostBinding } from '@angular/core';
 import { ICurso } from '../i-curso';
+import { Estado } from 'src/app/estado.enum';
 
 @Component({
   selector: 'app-mostrar-curso',
@@ -9,6 +10,7 @@ import { ICurso } from '../i-curso';
 export class MostrarCursoComponent implements OnInit {
   @Input() curso: ICurso;
   @HostBinding('attr.class') cssClass;
+  @Output() estado: Estado;
 
   constructor() { }
 
@@ -16,8 +18,8 @@ export class MostrarCursoComponent implements OnInit {
   }
 
   public cambioEstado(event): void {
-    this.curso.estado = event;
-    this.cssClass = event;
+    this.curso.estado = event.target.value;
+    this.cssClass = event.target.value;
   }
 }
 
