@@ -2,4 +2,11 @@
   Datos del curso:
   <br>
   Título: {{ curso.titulo }} 
+  <br>
+  Estado:
+  <select (onchange)="cambioEstado($event)">
+    <option value="Pendiente">Pendiente</option>
+    <option value="Activo">Activo</option>
+    <option value="Inactivo">Inactivo</option>
+  </select>
 </p>

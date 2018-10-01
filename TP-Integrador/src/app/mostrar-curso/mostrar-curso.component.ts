@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostBinding } from '@angular/core';
+import { ICurso } from '../i-curso';
 
 @Component({
   selector: 'app-mostrar-curso',
@@ -6,11 +7,17 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./mostrar-curso.component.css']
 })
 export class MostrarCursoComponent implements OnInit {
-  @Input() curso;
+  @Input() curso: ICurso;
+  @HostBinding('attr.class') cssClass;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  public cambioEstado(event): void {
+    this.curso.estado = event;
+    this.cssClass = event;
+  }
 }
+

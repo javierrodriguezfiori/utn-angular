@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IAlumno } from './i-alumno';
 import { IDocente } from './i-docente';
 import { ICurso } from './i-curso';
+import { Estado } from './estado.enum';
 
 @Component({
   selector: 'app-root',
@@ -25,6 +26,7 @@ export class AppComponent {
   };
 
   curso: ICurso = {
-    titulo: 'Angular'
+    titulo: 'Angular',
+    estado: Estado.Activo,
   };
 }
