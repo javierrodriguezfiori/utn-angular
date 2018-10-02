@@ -7,5 +7,6 @@
 <app-mostrar-docente [docente]='docente'></app-mostrar-docente>
 
 <h2> Curso </h2>
-<app-mostrar-curso [curso]='curso'></app-mostrar-curso>
+<app-mostrar-curso [curso]='curso' (estadoElegido)='cambiarEstado($event)'></app-mostrar-curso>
+
 

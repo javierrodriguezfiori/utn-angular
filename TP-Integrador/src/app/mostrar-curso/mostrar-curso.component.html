@@ -1,7 +1,9 @@
 <p>
   Título: {{ curso.titulo }} 
   <br>
-  Estado:
+  Estado: {{ curso.estado }}
+  <br>
+  Cambiar estado:
   <select (change)="cambioEstado($event)">
     <option value="Pendiente">Pendiente</option>
     <option value="Activo">Activo</option>

@@ -29,4 +29,8 @@ export class AppComponent {
     titulo: 'Angular',
     estado: Estado.Activo,
   };
+
+  public cambiarEstado(event){
+    this.curso.estado=event;
+  }
 }
