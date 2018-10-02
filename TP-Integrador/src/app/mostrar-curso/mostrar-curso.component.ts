@@ -10,9 +10,11 @@ import { Estado } from 'src/app/estado.enum';
 export class MostrarCursoComponent implements OnInit {
   @Input() curso: ICurso;
   @HostBinding('attr.class') cssClass;
-  @Output() estadoElegido: EventEmitter<Estado> = new EventEmitter();
+  @Output() estadoElegido: EventEmitter<Estado>;
 
-  constructor() { }
+  constructor() {
+    this.estadoElegido = new EventEmitter();
+  }
 
   ngOnInit() {
   }
