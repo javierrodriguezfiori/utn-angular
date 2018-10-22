@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, HostBinding, EventEmitter } from '@angular/core';
-import { ICurso } from '../i-curso';
+import { ICurso } from 'src/app/i-curso';
 import { Estado } from 'src/app/estado.enum';
 
 @Component({

@@ -31,6 +31,6 @@ export class AppComponent {
   };
 
   public cambiarEstado(event){
-    this.curso.estado=event;
+    this.curso.estado = event;
   }
 }

@@ -34,7 +34,7 @@ const ROUTES: Routes = [
   providers: [
     { provide: LocationStrategy,
       useClass: HashLocationStrategy
-    }   
+    }
   ],
   bootstrap: [AppComponent]
 })
