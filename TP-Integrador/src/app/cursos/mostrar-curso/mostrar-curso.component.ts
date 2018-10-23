@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, HostBinding, EventEmitter } from '@angular/core';
-import { ICurso } from 'src/app/i-curso';
-import { Estado } from 'src/app/estado.enum';
+import { ICurso } from 'src/app/model/i-curso';
+import { Estado } from 'src/app/model/estado.enum';
 
 @Component({
   selector: 'app-mostrar-curso',

@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { IAlumno } from './i-alumno';
-import { IDocente } from './i-docente';
-import { ICurso } from './i-curso';
-import { Estado } from './estado.enum';
+
+import { IAlumno } from './model/i-alumno';
+import { IDocente } from './model/i-docente';
+import { ICurso } from './model/i-curso';
+import { Estado } from './model/estado.enum';
 
 @Component({
   selector: 'app-root',

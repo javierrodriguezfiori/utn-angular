@@ -1,25 +1,22 @@
+// Importacion de modulos
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { Routes, RouterModule } from '@angular/router';
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
-
-import { MostrarAlumnoComponent } from './mostrar-alumno/mostrar-alumno.component';
-import { MostrarDocenteComponent } from './mostrar-docente/mostrar-docente.component';
-import { MostrarCursoComponent } from './cursos/mostrar-curso/mostrar-curso.component';
-import { MostrarCursosComponent } from './cursos/mostrar-cursos/mostrar-cursos.component';
-
-import { AppComponent } from './app.component';
 import { CursosModule } from './cursos/cursos.module';
+import { AlumnosModule } from './alumnos/alumnos.module';
+import { DocentesModule } from './docentes/docentes.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
+import { RoutingModule } from './routing/routing.module';
 
-const ROUTES: Routes = [
-  { path: 'cursos', component: MostrarCursosComponent },
-  { path: 'curso', component: MostrarCursoComponent },
-  { path: '', redirectTo: 'cursos', pathMatch: 'full'},
-  { path: '**', redirectTo: 'cursos', pathMatch: 'full'}
-];
+// Importacion para ruteo con Hash
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+
+// Importacion de componentes
+import { MostrarAlumnoComponent } from './alumnos/mostrar-alumno/mostrar-alumno.component';
+import { MostrarDocenteComponent } from './docentes/mostrar-docente/mostrar-docente.component';
+import { MostrarCursosComponent } from './cursos/mostrar-cursos/mostrar-cursos.component';
+import { MostrarCursoComponent } from './cursos/mostrar-curso/mostrar-curso.component';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +27,7 @@ const ROUTES: Routes = [
     CursosModule,
     CoreModule,
     SharedModule,
-    RouterModule.forRoot(ROUTES)
+    RoutingModule
   ],
   providers: [
     { provide: LocationStrategy,
