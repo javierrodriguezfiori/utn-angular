@@ -6,6 +6,7 @@ import { CursosModule } from './cursos/cursos.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { RoutingModule } from './routing/routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 // Importacion para ruteo con Hash
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
@@ -23,6 +24,7 @@ import { AppComponent } from './app.component';
     CursosModule,
     CoreModule,
     SharedModule,
+    HttpClientModule
   ],
   providers: [
     { provide: LocationStrategy,

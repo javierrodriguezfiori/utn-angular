@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 
 import { ICurso } from './model/i-curso';
-import { Estado } from './model/estado.enum';
 
 @Component({
   selector: 'app-root',
@@ -12,10 +11,7 @@ import { Estado } from './model/estado.enum';
 export class AppComponent {
   title = 'TP-Integrador';
 
-  curso: ICurso = {
-    titulo: 'Angular',
-    estado: Estado.Activo,
-  };
+  curso: ICurso;
 
   public cambiarEstado(event) {
     this.curso.estado = event;

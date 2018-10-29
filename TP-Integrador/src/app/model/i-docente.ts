@@ -1,5 +1,5 @@
 export interface IDocente {
-    dni: number;
+    id: number;
     nombre: string;
     apellido: string;
 }
