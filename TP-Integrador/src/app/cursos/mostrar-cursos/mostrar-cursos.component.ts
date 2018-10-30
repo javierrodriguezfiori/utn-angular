@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CursoService } from '../curso.service';
 import { ICurso } from 'src/app/model/i-curso';
-import { IDocente } from 'src/app/model/i-docente';
-import { CursosModule } from '../cursos.module';
 
 @Component({
   selector: 'app-mostrar-cursos',

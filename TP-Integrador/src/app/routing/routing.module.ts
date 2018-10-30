@@ -7,7 +7,7 @@ import { HomeComponent } from 'src/app/core/home/home.component';
 
 const ROUTES: Routes = [
   { path: 'cursos', component: MostrarCursosComponent },
-  { path: 'curso', component: MostrarCursoComponent },
+  { path: 'curso/:id', component: MostrarCursoComponent },
   { path: 'home', component: HomeComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: '**', redirectTo: 'home', pathMatch: 'full'}

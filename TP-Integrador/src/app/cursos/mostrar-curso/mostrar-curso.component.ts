@@ -1,6 +1,8 @@
 import { Component, OnInit, Input, Output, HostBinding, EventEmitter } from '@angular/core';
 import { ICurso } from 'src/app/model/i-curso';
 import { Estado } from 'src/app/model/estado.enum';
+import { CursoService } from '../curso.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-mostrar-curso',
@@ -12,16 +14,26 @@ export class MostrarCursoComponent implements OnInit {
   @HostBinding('attr.class') cssClass;
   @Output() estadoElegido: EventEmitter<Estado>;
 
-  constructor() {
+  id: string;
+  cursos: ICurso[];
+
+  constructor(private cursoService: CursoService, private route: ActivatedRoute) {
     this.estadoElegido = new EventEmitter();
+    this.route.params.subscribe(params => this.id = params['id'] );
   }
 
   ngOnInit() {
+    this.mostrarCursos();
   }
 
   public cambioEstado(event): void {
     this.cssClass = event.target.value;
     this.estadoElegido.emit(event.target.value);
+  }
+
+  mostrarCursos() {
+    this.cursoService.getCursos()
+      .subscribe( (data: ICurso[]) => this.cursos = {...data} );
   }
 }
 
