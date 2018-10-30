@@ -1,7 +1,12 @@
-<nav>
-  <a [routerLink]="['/home']">Home</a>&nbsp;
-  <a [routerLink]="['/cursos']">Cursos</a>&nbsp;
-  <a [routerLink]="['/curso',22]">Curso 22</a>&nbsp;
-  <a [routerLink]="['/curso',24]">Curso 24</a>&nbsp;
-  <a [routerLink]="['/curso',30]">Curso 30</a>&nbsp;
-</nav>
+<ul>
+  <li><a [routerLink]="['/home']">Home</a></li>
+  <li><a [routerLink]="['/cursos']">Cursos</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Curso</a>
+    <div class="dropdown-content">
+      <a [routerLink]="['/curso',22]">Curso 22</a>
+      <a [routerLink]="['/curso',24]">Curso 24</a>
+      <a [routerLink]="['/curso',30]">Curso 30</a>
+    </div>
+  </li>
+</ul>
