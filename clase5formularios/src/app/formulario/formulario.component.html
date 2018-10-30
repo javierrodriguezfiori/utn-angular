@@ -1,0 +1,56 @@
+<!-- <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+  <label for="nombreInput">Ingresar datos:</label> <br><br>
+  <input
+    type="text"
+    id="nombreInput"
+    placeholder="nombre"
+    name="name"
+    #nombre="ngModel"
+    ngModel required> 
+    <span *ngIf="nombre.invalid && nombre.touched">&nbsp;Complete el nombre</span>
+    <br><br>
+  <input
+    type="email"
+    id="emailInput"
+    placeholder="email"
+    name="email"
+    #email="ngModel"
+    email
+    ngModel required> 
+    <span *ngIf="email.invalid && email.touched">&nbsp;Complete el email</span><br>
+    <span *ngIf="email.hasError('email')">&nbsp;Formato de email invalido</span>
+    <br><br>
+  <button type="submit" [disabled]="f.invalid">Enviar</button>
+</form> -->
+
+<form 
+  [formGroup]="myForm"
+  (ngSubmit)="onSubmit(myForm.value)">
+  <input
+    type="text"
+    id="nombreInput"
+    placeholder="nombre" 
+    name="nombre" 
+    [formControl]="myForm.controls['nombre']">
+    &nbsp;<span *ngIf="nombre.invalid">Complete el nombre</span>
+    <br><br>
+  <input
+    type="email"
+    id="emailInput"
+    placeholder="email" 
+    name="email" 
+    [formControl]="myForm.controls['email']">
+    &nbsp;<span *ngIf="email.invalid">Formato de mail invalido</span>
+    <br><br>
+  <span> Subscribirse al newsletter?</span>&nbsp; 
+  <input
+    type="checkbox"
+    id="newsletter"
+    placeholder="newsletter" 
+    name="newsletter" 
+    [formControl]="myForm.controls['newsletter']">
+    <br><br>
+  <button type="submit">Enviar</button>
+</form>
+  
+  
