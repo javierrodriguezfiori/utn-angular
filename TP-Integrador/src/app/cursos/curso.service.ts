@@ -10,7 +10,7 @@ export class CursoService {
 
   constructor(private http: HttpClient) { }
 
-  getCursos(){
+  getCursos(): Observable<ICurso[]> {
     return this.http.get<ICurso[]>('http://demo3744158.mockable.io/cursos');
   }
 }

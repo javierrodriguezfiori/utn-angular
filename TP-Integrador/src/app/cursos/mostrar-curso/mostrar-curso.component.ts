@@ -23,17 +23,13 @@ export class MostrarCursoComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.mostrarCursos();
+    this.cursoService.getCursos().
+      subscribe(data => this.cursos = data);
   }
 
   public cambioEstado(event): void {
     this.cssClass = event.target.value;
     this.estadoElegido.emit(event.target.value);
-  }
-
-  mostrarCursos() {
-    this.cursoService.getCursos()
-      .subscribe( (data: ICurso[]) => this.cursos = {...data} );
   }
 }
 

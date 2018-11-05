@@ -14,11 +14,7 @@ export class MostrarCursosComponent implements OnInit {
   cursos: ICurso[];
 
   ngOnInit() {
-    this.mostrarCursos();
-  }
-
-  mostrarCursos() {
-    this.cursoService.getCursos()
-      .subscribe( (data: ICurso[]) => this.cursos = {...data} );
+    this.cursoService.getCursos().
+      subscribe(data => this.cursos = data);
   }
 }
