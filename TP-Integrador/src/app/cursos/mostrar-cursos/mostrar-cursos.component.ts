@@ -9,12 +9,13 @@ import { ICurso } from 'src/app/model/i-curso';
 })
 export class MostrarCursosComponent implements OnInit {
 
-  constructor(private cursoService: CursoService) { }
+  constructor(private cursoService: CursoService) { 
+    this.cursoService.getCursos().
+      subscribe(data => this.cursos = data);
+  }
 
   cursos: ICurso[];
 
   ngOnInit() {
-    this.cursoService.getCursos().
-      subscribe(data => this.cursos = data);
   }
 }

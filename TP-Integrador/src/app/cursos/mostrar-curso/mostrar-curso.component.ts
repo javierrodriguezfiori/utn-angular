@@ -20,11 +20,11 @@ export class MostrarCursoComponent implements OnInit {
   constructor(private cursoService: CursoService, private route: ActivatedRoute) {
     this.estadoElegido = new EventEmitter();
     this.route.params.subscribe(params => this.id = params['id'] );
+    this.cursoService.getCursos().
+      subscribe(data => this.cursos = data);
   }
 
   ngOnInit() {
-    this.cursoService.getCursos().
-      subscribe(data => this.cursos = data);
   }
 
   public cambioEstado(event): void {
