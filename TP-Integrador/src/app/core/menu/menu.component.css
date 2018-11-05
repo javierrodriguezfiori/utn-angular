@@ -16,6 +16,7 @@ li a, .dropbtn {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-family: Tahoma, Geneva, sans-serif;
 }
 
 li a:hover, .dropdown:hover .dropbtn {
@@ -41,6 +42,7 @@ li.dropdown {
     text-decoration: none;
     display: block;
     text-align: left;
+    font-size: 15px
 }
 
 .dropdown-content a:hover {background-color: rgb(6, 143, 6)}
@@ -48,3 +50,4 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
