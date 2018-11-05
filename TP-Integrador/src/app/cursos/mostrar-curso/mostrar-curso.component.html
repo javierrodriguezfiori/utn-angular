@@ -4,8 +4,8 @@
   <option value="Inactivo">Inactivo</option>
 </select> -->
 
-<ul *ngFor="let curso of cursos | keyvalue">
-  <div *ngIf="curso.value.id == id">
+<div *ngFor="let curso of cursos | keyvalue">
+  <ul *ngIf="curso.value.id == id">
     <li> Id: {{ curso.value.id }}</li>
     <li> Título: {{ curso.value.titulo }}</li>
     <li> Fecha de inicio: {{ curso.value.fechaInicio | date }}</li>
@@ -26,5 +26,5 @@
     </li>
     <li> Laboratorio: {{ curso.value.laboratorio }}</li>
     <li> Estado: {{ curso.value.estado }}</li>
-  </div>
-</ul>
+  </ul>
+</div>

@@ -2,7 +2,7 @@ import { Estado } from './estado.enum';
 import { IDocente } from 'src/app/model/i-docente';
 
 export interface ICurso {
-    id: number;
+    id: string;
     titulo: string;
     fechaInicio: Date;
     fechaFin: Date;

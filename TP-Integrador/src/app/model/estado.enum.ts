@@ -1,5 +1,5 @@
 export enum Estado {
-    Pendiente,
+    Pendiente ,
     Activo,
     Inactivo
 }
