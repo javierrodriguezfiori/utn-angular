@@ -1,10 +1,11 @@
 <ul>
-<li><a [routerLink]="['/home']">Home</a></li>
-<li><a [routerLink]="['/cursos']">Cursos</a></li>
-<li class="dropdown">
-  <a href="javascript:void(0)" class="dropbtn">Curso</a>
-  <div class="dropdown-content">
-    <a *ngFor="let curso of cursos | keyvalue" [routerLink]="['/curso',curso.value.id]">Curso {{curso.value.id}}</a>
-  </div>
-</li>
+  <li><a [routerLink]="['/home']">Home</a></li>
+  <li><a [routerLink]="['/cursos']">Cursos</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Curso</a>
+      <div class="dropdown-content">
+        <a *ngFor="let curso of cursos | keyvalue" [routerLink]="['/curso',curso.value.id]">Curso {{curso.value.id}}</a>
+      </div>
+  </li>
+  <li><a [routerLink]="['/cargaAlumnos']">Alumnos</a></li>
 </ul>

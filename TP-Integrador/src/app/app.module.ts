@@ -13,6 +13,7 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 // Importacion de componentes
 import { AppComponent } from './app.component';
+import { AlumnosModule } from './alumnos/alumnos.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AppComponent } from './app.component';
     CursosModule,
     CoreModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    AlumnosModule
   ],
   providers: [
     { provide: LocationStrategy,
