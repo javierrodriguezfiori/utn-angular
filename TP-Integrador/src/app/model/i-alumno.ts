@@ -1,5 +1,10 @@
 export interface IAlumno {
-    dni: number;
-    nombre: string;
-    apellido: string;
+    nombre:	string,
+    apellido: string,
+    fechaNacimiento: Date,
+    tipoDocumento: number,
+    documento: number,
+    comunidad:	boolean,
+    legajo:	string,
+    cursos: number[]
 }

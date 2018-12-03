@@ -1,0 +1,16 @@
+<ul *ngFor="let alumno of alumnos | keyvalue">
+  <li> Nombre: {{ alumno.value.nombre }}</li>
+  <li> Apellido: {{ alumno.value.apellido }}</li>
+  <li> Fecha de nacimiento: {{ alumno.value.fechaNacimiento | date }}</li>
+  <li> Tipo de documento: {{ alumno.value.tipoDocumento }}</li>
+  <li> Documento: {{ alumno.value.documento }}</li>
+  <li> Comunidad: {{ alumno.value.comunidad }}</li>
+  <li> Legajo: {{ alumno.value.legajo }}</li>
+  <li> Cursos: 
+    <ul>
+      <li *ngFor="let curso of alumno.value.cursos">
+        {{ curso }}
+      </li>
+    </ul>
+  </li>
+</ul>
