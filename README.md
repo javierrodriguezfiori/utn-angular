@@ -10,3 +10,7 @@
     POST genérico https://demo3744158.mockable.io/alumno
     PUT genérico https://demo3744158.mockable.io/alumno
     DELETE genérico https://demo3744158.mockable.io/alumno
+
+# Hosting gratis
+    TUARS
+    000webhost
