@@ -10,7 +10,7 @@ import { IAlumno } from 'src/app/model/i-alumno';
 export class MostrarAlumnosComponent implements OnInit {
 
   constructor(private alumnoService: AlumnoService) { 
-    this.alumnoService.getCursos().
+    this.alumnoService.getAlumnos().
     subscribe(data => this.alumnos = data);
   }
 

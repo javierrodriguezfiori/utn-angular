@@ -10,7 +10,7 @@ export class AlumnoService {
 
   constructor(private http: HttpClient) { }
 
-  getCursos(): Observable<IAlumno[]> {
+  getAlumnos(): Observable<IAlumno[]> {
     return this.http.get<IAlumno[]>('https://demo3744158.mockable.io/alumnos');
   }
 }

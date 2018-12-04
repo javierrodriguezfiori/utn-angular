@@ -1,0 +1,25 @@
+:host(.Inactivo) {
+    color: rgb(253, 2, 2)
+}
+
+:host(.Activo) {
+    color: rgb(0, 0, 255)
+
+}
+
+:host(.Pendiente) {
+    color: rgb(0, 255, 0)
+}
+
+ul {
+    border-left: 5px solid rgb(6, 143, 6);
+    background-color: #f1f1f1;
+    list-style-type: none;
+    padding: 10px 30px
+}
+
+ul li {
+    padding: 5px;  
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 15px;
+}

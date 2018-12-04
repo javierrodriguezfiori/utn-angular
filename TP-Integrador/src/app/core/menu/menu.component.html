@@ -3,7 +3,7 @@
   <li><a [routerLink]="['/home']">Home</a></li>
   <!-- Mostrar listado de cursos -->
   <li><a [routerLink]="['/cursos']">Cursos</a></li>
-  <!-- Mostrar Curso -->
+  <!-- Mostrar Curso por id -->
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">Curso</a>
       <div class="dropdown-content">
@@ -11,7 +11,14 @@
       </div>
   </li>
   <!-- Mostrar lista de alumnos -->
-  <li><a [routerLink]="['/mostrarAlumnos']">Mostrar alumnos</a></li>
+  <li><a [routerLink]="['/mostrarAlumnos']">Alumnos</a></li>
+  <!-- Mostrar alumno por id -->
+  <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Alumno</a>
+        <div class="dropdown-content">
+          <a *ngFor="let alumno of alumnos | keyvalue" [routerLink]="['/alumno',alumno.value.id]">Alumno {{alumno.value.id}}</a>
+        </div>
+    </li>
   <!-- Carga de alumnos -->
-  <li><a [routerLink]="['/cargaAlumnos']">Cargar alumno</a></li>
+  <li><a [routerLink]="['/cargaAlumnos']">Carga alumno</a></li>
 </ul>
